@@ -2,7 +2,7 @@
 class RichMenu {
 
   constructor() {
-    this.ACCESS_TOKEN = "ox4co5ohKzmT/kY9nh2K+FHbKjjzds5xEgK1yJzcZJ8LctJIb9Bp7RZmUWgcCNsdRLOXTZAWKSXk9OGqUvwp7eUlA9mDBCKB+mMjGjVvRJTi9TNd6VzGl0pmm8rFb3Cv1URKwABU3JCCkmvfzNb1TgdB04t89/1O/w1cDnyilFU=";
+    this.ACCESS_TOKEN = "";
   }
 
 
@@ -80,7 +80,7 @@ class RichMenu {
     //nameで降順ソートする
     values.sort((a, b) => { return a[1] < b[1] ? -1 : 1; });
 
-    const sheet = SpreadsheetApp.openById("1UxX6rKm8BwN9irV0kKJgsvokAx1HLJDTOS3ccKBiXy4").getSheetByName("シート1");
+    const sheet = SpreadsheetApp.openById("").getSheetByName("シート1");
     sheet.getRange(2, 5, values.length, values[0].length).setValues(values);
     return "スプレッドシートに貼り付けしました";
   }
@@ -158,21 +158,20 @@ function testRichMenu() {
   // console.log(r.getRichMenuIds());
 
   //リッチメニューオブジェクトを削除する
-  // const id = "richmenu-6110d3a177026a9be9296854562152ea";
+  // const id = "";
   // console.log(r.deleteRichMenu_(id));
 
   //リッチメニュー一覧をスプレッドシートに出力する
   // console.log(r.setValuesRichMenuIds());
 
   //リッチメニュー画像アップロードとリッチメニューIDへの紐づけを行う
-  // const richMenuId = "richmenu-80084483883fcb04aeba595d1e64fff4";
-  // const imageId = "1ULNCgtGPSaB-04n_mO4WfuXfdRyi2Xx2";
+  // const richMenuId = "";
+  // const imageId = "";
   // console.log(r.uploadRichMenuImage(richMenuId, imageId));
 
   //ユーザーにリッチメニューをリンクする
-  const richMenuId = "richmenu-80084483883fcb04aeba595d1e64fff4";
-  const userId = "U071717f1c8812b9cc053a8084ef94d88";
+  const richMenuId = "";
+  const userId = "";
   console.log(r.sendRichMenuToUser(richMenuId, userId));
-
 
 }
